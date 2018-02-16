@@ -16,16 +16,16 @@ public class App
 {
     public static boolean search(ArrayList<Integer> array,ArrayList<Integer> array2,int e,int e2) {
     
-	int length1=array.length();
-	int length2=array2.length();
+	int length1=array.size();
+	int length2=array2.size();
 
 	if(length1<=e)
 		return false;
 	if(length2<=e2)
 		return false;
-	if(array[e]==null)
+	if(array.get(e)==null)
 		return false;
-	if(array2[e2]=null)
+	if(array2.get(e2)==null)
 		return false;
 	
 	return true;
@@ -63,27 +63,32 @@ public class App
 
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
-/*****/
 
-	  String input3 = req.queryParams("input3");
-          java.util.Scanner sc2 = new java.util.Scanner(input3);
-          sc1.useDelimiter("[;\r\n]+");
-          java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
-          while (sc2.hasNext())
+	
+
+	
+
+	String input3 = req.queryParams("input3");
+          java.util.Scanner sc3 = new java.util.Scanner(input3);
+          sc3.useDelimiter("[;\r\n]+");
+          java.util.ArrayList<Integer> inputList3 = new java.util.ArrayList<>();
+          while (sc3.hasNext())
           {
-            int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
-            inputList2.add(value);
+            int value3 = Integer.parseInt(sc3.next().replaceAll("\\s",""));
+            inputList.add(value3);
           }
-          System.out.println(inputList2);
+          System.out.println(inputList3);
 
 
           String input4 = req.queryParams("input4").replaceAll("\\s","");
-          int input4AsInt = Integer.parseInt(input2);
-	
+          int input4AsInt = Integer.parseInt(input4);
 
-/********/
 
-          boolean result = App.search(inputList,inputList2,input4asInt input2AsInt);
+
+
+
+
+	  boolean result = App.search(inputList,inputList3,input2AsInt,input4AsInt);
 	
 	
 

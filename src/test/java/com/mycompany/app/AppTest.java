@@ -37,23 +37,34 @@ public class AppTest
     {
         assertTrue( true );
     }
-    public void testFound() {
+    public void testArrayIndexOutOfBounds() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertTrue(new App().search(array, 4));
+      ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+      assertFalse(new App().search(array,array2,6, 2));
     }
 
-    public void testNotFound() {
+    public void testArray2IndexOutOfBounds() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertFalse(new App().search(array, 5));
+      ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+      assertFalse(new App().search(array,array2,3,5));
     }
 
-    public void testEmptyArray() {
-      ArrayList<Integer> array = new ArrayList<>();
-      assertFalse(new App().search(array, 1));
+    public void testIsArrayCharacterNull() {
+      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, null, 3, 4));
+	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+      assertFalse(new App().search(array,array2, 1,1));
     }
 
-    public void testNull() {
-      assertFalse(new App().search(null, 1));
+    public void testIsArray2CharacterNull() {
+	ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, null));
+      assertFalse(new App().search(array,array2,2, 3));
+    }
+
+    public void testAllPassed() {
+	ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+      assertTrue(new App().search(array, array2 , 2 , 3));
     }
 
 }
