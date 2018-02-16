@@ -61,12 +61,6 @@ public class App
           System.out.println(inputList);
 
 
-          String input2 = req.queryParams("input2").replaceAll("\\s","");
-          int input2AsInt = Integer.parseInt(input2);
-
-	
-
-	
 
 	String input3 = req.queryParams("input3");
           java.util.Scanner sc3 = new java.util.Scanner(input3);
@@ -78,6 +72,14 @@ public class App
             inputList.add(value3);
           }
           System.out.println(inputList3);
+
+          String input2 = req.queryParams("input2").replaceAll("\\s","");
+          int input2AsInt = Integer.parseInt(input2);
+
+	
+
+	
+
 
 
           String input4 = req.queryParams("input4").replaceAll("\\s","");
