@@ -18,7 +18,7 @@ public class App
     
 	int length1=array.size();
 	int length2=array2.size();
-
+//
 	if(length1<=e)
 		return false;
 	if(length2<=e2)
