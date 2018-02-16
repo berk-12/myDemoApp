@@ -21,11 +21,11 @@ public class App
 //
 	if(length1<=e)
 		return false;
-	if(length2<=e2)
+	else if(length2<=e2)
 		return false;
-	if( e < 0 || e2 < 0)
+	else if( e < 0 || e2 < 0)
 		return false;
-	if(array.get(e) != array2.get(e2)){
+	else if(e != e2){
 		return false;
 	}
 	
