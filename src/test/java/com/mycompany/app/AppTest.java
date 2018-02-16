@@ -46,13 +46,13 @@ public class AppTest
       assertFalse(new App().search(array,array2,3,5));
     }
 
-    public void testIsArrayCharacterNull() {
+    public void testIsArrayCharacterNotEqual() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
       assertFalse(new App().search(array,array2, 1,2));
     }
 
-    public void testIsArray2CharacterNull() {
+    public void testIsArrayNegativeIndex() {
 	ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
 	ArrayList<Integer> array2 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
       assertFalse(new App().search(array,array2,-2, 3));

@@ -25,20 +25,13 @@ public class App
 		return false;
 	if( e < 0 || e2 < 0)
 		return false;
-	if(array.get(e)!=array2.get(e2))
+	if(array.get(e) != array2.get(e2)){
 		return false;
+	}
 	
 	return true;
-
-
-/*  System.out.println("inside ");
-      if (array == null) return false;
-
-      for (int elt : array) {
-        if (elt == e) return true;
-      }
-      return false;*/
-    
+	
+     
 }
 
     public static void main(String[] args) {
