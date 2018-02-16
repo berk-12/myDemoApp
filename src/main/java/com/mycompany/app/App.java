@@ -23,9 +23,9 @@ public class App
 		return false;
 	if(length2<=e2)
 		return false;
-	if(array.get(e)==null)
+	if( e < 0 || e2 < 0)
 		return false;
-	if(array2.get(e2)==null)
+	if(array.get(e)!=array2.get(e2))
 		return false;
 	
 	return true;
